@@ -1,2 +1,3 @@
-# Fuzion
-AI Trading Signals Web App with Smart Money Strategy, RSI + EMA Entry, Auto TP/SL, and FII/DII based confirmation.
+# Fuzion - AI Trading Signals Web App
+
+This app uses Smart Money Strategy, RSI + EMA, Auto TP/SL, and FII/DII Confirmation.
