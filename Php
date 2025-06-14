@@ -1,0 +1,9 @@
+<?php
+echo "Welcome to AI Trading Signals Web App!";
+?>{
+  "name": "kakib12/ai-trading",
+  "description": "AI Trading Signals Web App in PHP",
+  "require": {}
+}# Fuzion AI Trading Signals Web App
+
+This is a PHP web app project for AI trading with Smart Money Strategy.
