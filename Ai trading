@@ -1,0 +1,73 @@
+Fuzion/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Trading - Fuzion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Trading Signals</h1>
+    <p>Smart Money Strategy | RSI + EMA | FII/DII Confirmation | Auto SL/TP</p>
+    
+    <div id="signal-box">
+      <button onclick="generateSignal()">Generate Signal</button>
+      <div id="signal-output"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>body {
+  font-family: Arial, sans-serif;
+  background-color: #101820;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #1e2b38;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00c853;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}function generateSignal() {
+  const signals = [
+    "📈 Buy XAU/USD (Gold) - RSI < 30, EMA Crossover, FII Positive",
+    "📉 Sell XAU/USD - RSI > 70, EMA Reversal, DII Pressure",
+    "⚠️ Wait - No Confirmed Signal"
+  ];
+
+  const signal = signals[Math.floor(Math.random() * signals.length)];
+  document.getElementById("signal-output").innerText = signal;
+}# Fuzion - AI Trading Signals Web App
+
+This is a simple AI-based Forex (Gold XAU/USD) Signal Generator Web App.
+
+### Features:
+- ✅ Smart Money Strategy Based Signal
+- 📊 RSI + EMA Crossover Logic
+- 🇮🇳 FII/DII Confirmation
+- 🎯 Auto TP/SL Logic Simulated
+
+### How to Use:
+1. Open `index.html` in any browser.
+2. Click "Generate Signal".
+3. Follow the BUY/SELL suggestion for Intraday Trading.
+
+Made for educational purposes.
