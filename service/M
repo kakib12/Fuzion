@@ -1,0 +1,13 @@
+from fastapi import FastAPI
+from strategies import generate_signal
+import uvicorn
+
+app = FastAPI()
+
+@app.get("/signal")
+def get_signal():
+    result = generate_signal()
+    return result
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
