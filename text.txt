@@ -1,0 +1,3 @@
+<?php
+echo "Welcome to AI Trading Signals Web App!";
+?>

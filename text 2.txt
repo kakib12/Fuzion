@@ -1,0 +1,3 @@
+# Fuzion AI Trading Signals Web App
+
+This is a PHP web app project for AI trading with Smart Money Strategy.

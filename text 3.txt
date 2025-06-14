@@ -1,0 +1,5 @@
+{
+  "name": "kakib12/ai-trading",
+  "description": "AI Trading Signals Web App in PHP",
+  "require": {}
+}
