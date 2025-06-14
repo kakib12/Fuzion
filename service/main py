@@ -1,0 +1,15 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class SignalResponse(BaseModel):
+    signal: str
+    confidence: float
+
+@app.get("/signal", response_model=SignalResponse)
+def get_signal():
+    return {
+        "signal": "BUY",
+        "confidence": 0.87
+    }
