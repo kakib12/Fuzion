@@ -1,0 +1,29 @@
+import pandas as pd
+import ta
+
+def generate_signal():
+    df = pd.read_csv("https://raw.githubusercontent.com/kakib12/Fuzion/main/data/sample_gold_data.csv")
+
+    df['rsi'] = ta.momentum.RSIIndicator(df['close']).rsi()
+    df['ema_20'] = ta.trend.EMAIndicator(df['close'], window=20).ema_indicator()
+    df['ema_50'] = ta.trend.EMAIndicator(df['close'], window=50).ema_indicator()
+
+    latest = df.iloc[-1]
+    signal = "WAIT"
+
+    if latest['rsi'] < 30 and latest['ema_20'] > latest['ema_50']:
+        signal = "BUY"
+    elif latest['rsi'] > 70 and latest['ema_20'] < latest['ema_50']:
+        signal = "SELL"
+
+    entry = latest['close']
+    sl = entry * 0.995 if signal == "BUY" else entry * 1.005
+    tp = entry * 1.015 if signal == "BUY" else entry * 0.985
+
+    return {
+        "signal": signal,
+        "entry_price": round(entry, 2),
+        "stop_loss": round(sl, 2),
+        "take_profit": round(tp, 2),
+        "rsi": round(latest['rsi'], 2)
+    }
